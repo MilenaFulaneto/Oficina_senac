@@ -1,0 +1,58 @@
+:root {
+  /* --- Colors --- */
+  --color-primary: #1a1c1e;    /* Dark Gray (Charcoal) */
+  --color-secondary: #f4f4f4;  /* Off-White (Clean) */
+  --color-accent: #ff9f1c;     /* Orange-Gold (Industrial) */
+  
+  /* --- Neutral Scales --- */
+  --bg-dark: var(--color-primary);
+  --bg-light: var(--color-secondary);
+  --text-on-dark: #ffffff;
+  --text-on-light: #1a1c1e;
+  --border-color: #3e444b;
+
+  /* --- Typography --- */
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-headings: 'Roboto Condensed', sans-serif;
+
+  /* --- Font Weights --- */
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  /* --- Spacing System --- */
+  --space-xs: 0.5rem;   /* 8px */
+  --space-sm: 1rem;     /* 16px */
+  --space-md: 1.5rem;   /* 24px */
+  --space-lg: 3rem;     /* 48px */
+
+  /* --- Border Radius --- */
+  --radius-sm: 4px;     /* Looks more "industrial" and sharp */
+  --radius-md: 8px;
+
+  /* --- Transitions --- */
+  --transition-fast: 0.2s ease-in-out;
+}
+
+/* Exemplo rápido de aplicação */
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-on-dark);
+  font-family: var(--font-main);
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  font-family: var(--font-headings);
+  font-weight: var(--fw-bold);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  transition: var(--transition-fast);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.1);
+  cursor: pointer;
+}
