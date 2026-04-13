@@ -112,8 +112,9 @@ header{
 .bem-hero_imagem{
 position: absolute;
 bottom: 0;
-right: 5%;
+right: 20%;
 z-index: 2;
+transform: scale(2) translate(50px, -30px);
 }
 .bem-container{
   width:100%;
