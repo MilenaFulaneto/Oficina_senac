@@ -1,37 +1,35 @@
-:root {
+ :root {
   /* --- Colors --- */
-  --color-primary: #1a1a1b;     /* Carbon Grey (60%) */
-  --color-secondary: #ffffff;   /* Pure White (30%) */
-  --color-tertiary: #f2994a;    /* Power Gold (10%) */
-  /* Variations for depth */
-  --color-primary-light: #2d2d2e;
-  --color-tertiary-hover: #d4833b;
-  /* Semantic Colors */
-  --color-success: #27ae60;
-  --color-danger: #eb5757;
-  --color-text-main: #ffffff;
-  --color-text-inverted: #1a1a1b;
-  --color-gray-muted: #828282;
-  /* --- Typography --- */
-  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-heading: 'Oswald', sans-serif;
-  --text-xs: 0.75rem;   /* 12px */
-  --text-sm: 0.875rem;  /* 14px */
-  --text-base: 1rem;    /* 16px */
-  --text-lg: 1.25rem;   /* 20px */
-  --text-xl: 1.5rem;    /* 24px */
-  --text-2xl: 2rem;     /* 32px */
-  /* --- Spacing & Layout --- */
-  --space-unit: 8px;
-  --radius-sm: 4px;     /* Bordas levemente arredondadas para aspecto técnico */
-  --radius-md: 8px;
-  --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+ --color-primary: #1a1c1e;    /* Dark Gray (Charcoal) */
+  --color-secondary: #f4f4f4;  /* Off-White (Clean) */
+  --color-accent: #ff9f1c;     /* Orange-Gold (Industrial) */
+  
+  /* --- Neutral Scales --- */
+  --bg-dark: var(--color-primary);
+  --bg-light: var(--color-secondary);
+  --text-on-dark: #ffffff;
+  --text-on-light: #1a1c1e;
+  --border-color: #3e444b;
+  --font-headings: 'Roboto Condensed', sans-serif;
+
+  /* --- Font Weights --- */
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  /* --- Spacing System --- */
+  --space-xs: 0.5rem;   /* 8px */
+  --space-sm: 1rem;     /* 16px */
+  --space-md: 1.5rem;   /* 24px */
+  --space-lg: 3rem;     /* 48px */
+
+  /* --- Border Radius --- */
+  --radius-sm: 4px;     /* Looks more "industrial" and sharp */
   /* --- Transitions --- */
-  --transition-fast: 200ms ease;
-}
-/* Exemplo de aplicação rápida */
-body {
-  background-color: var(--color-primary);
+ --transition-fast: 0.2s ease-in-out;
+
+ /* Exemplo rápido de aplicação */
+   background-color: var(--color-primary);
   color: var(--color-text-main);
   font-family: var(--font-main);
 }
@@ -42,7 +40,7 @@ body {
   text-transform: uppercase;
   padding: var(--space-unit) calc(var(--space-unit) * 2);
   border-radius: var(--radius-sm);
-  transition: background-color var(--transition-fast);
+    transition: background-color var(--transition-fast);
 }
 .button-cta:hover {
   background-color: var(--color-tertiary-hover);
