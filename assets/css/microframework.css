@@ -57,12 +57,26 @@ body{
   color:var(--bem-text);
   background:var(--bem-bg);
   transition:background .25s, color .25s;
+  cursor: url(../imagens/cursor/cursor.svg), auto;
+}
+a{
+  cursor: url(../imagens/cursor/cursor-ancora.svg),auto;
+  text-decoration: none;
 }
 header{
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2.5rem
+}
+.bem-logo{
+  position: absolute;
+  top: 0px;
+  left: 50px;
+  /*                     X     Y */
+  transform: translate(-120px, 0);
+  z-index: 1001;
+
 }
 .bem-hero{
   /*Relativo para controlar a posição absoluta dos filhos */
@@ -264,7 +278,7 @@ z-index: 2;
 .bem-navbar{
   display:flex;
   align-items:center;
-  justify-content:space-between;
+  justify-content:space-around;
   padding:var(--bem-spacing-md) var(--bem-spacing-lg);
   background-color:var(--bem-surface);
   box-shadow:var(--bem-shadow-sm);
@@ -272,8 +286,19 @@ z-index: 2;
   transition: background .25s;
   position:sticky; top:0; z-index:100;
 }
+.bem-navbar--secundaria{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:var(--bem-spacing-md) var(--bem-spacing-lg);
+  background-color:var(--bem-surface);
+  box-shadow:var(--bem-shadow-sm);
+  border-bottom:1px solid var(--bem-border);
+  transition: background .25s;
+  position:sticky; top:70px; z-index:10;
+}
 .bem-navbar--dark{ background-color:var(--bem-dark);color:#fff }
-.bem-navbar__brand{ font-size:1.5rem;font-weight:700;text-decoration:none;color:inherit }
+.bem-navbar__brand{ font-size:1.5rem;font-weight:700;text-decoration:none;color:inherit; position: relative; }
 .bem-navbar__menu{ display:flex;gap:var(--bem-spacing-lg);list-style:none;align-items:center }
 .bem-navbar__item{ display:inline-flex }
 .bem-navbar__link{ text-decoration:none;color:var(--bem-text-muted);padding:var(--bem-spacing-sm);transition:color .2s }
