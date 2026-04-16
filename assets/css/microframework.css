@@ -286,6 +286,11 @@ transform: scale(2) translate(50px, -30px);
   border-bottom:1px solid var(--bem-border);
   transition: background .25s;
   position:sticky; top:0; z-index:100;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: rgb(141, 58, 78);
+  color: var(--bem-secondary);
 }
 .bem-navbar--secundaria{
   display:flex;
@@ -297,6 +302,8 @@ transform: scale(2) translate(50px, -30px);
   border-bottom:1px solid var(--bem-border);
   transition: background .25s;
   position:sticky; top:70px; z-index:10;
+  background-color: rgb(247, 213, 231);
+  color: var(--bem-secondary);
 }
 .bem-navbar--dark{ background-color:var(--bem-dark);color:#fff }
 .bem-navbar__brand{ font-size:1.5rem;font-weight:700;text-decoration:none;color:inherit; position: relative; }
