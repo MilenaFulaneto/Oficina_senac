@@ -60,15 +60,20 @@ body{
   font-family:var(--bem-font-base);
   line-height:1.5;
   color:var(--bem-text);
-  background:var(--bem-bg);
+  background:var(--bem-light);
   transition:background .25s, color .25s;
-  cursor: url(../imagens/cursor/cursor.svg), auto;
+  cursor: url(../imagens/cursor/cursor-svgrepo-com.svg), auto;
 }
 a{
-  cursor: url(../imagens/cursor/cursor-ancora.svg), auto;
+  cursor: url(../imagens/cursor/ancora.svg), auto;
   text-decoration: none;
   color: var(--bem-secondary);
 }
+p{
+  color: var(--bem-primary);
+  padding: 10px 100px;
+}
+
 header{
   display: flex;
   justify-content: center;
@@ -108,10 +113,10 @@ header{
   align-items: center;
   justify-content: center;
   border-radius: 100px 0 0 0;
-  background-color: white;
   width: 45%;
-  height: 300px;
+  height: 230px;
   z-index: 5;
+  background-color: var(--bem-text-muted);
 }
 .sobre-descricao{
   position: absolute;
@@ -120,9 +125,9 @@ header{
   display: flex;
   flex-direction: column;
   width: 60%;
-  border: yellow 2px solid;
   height: 30px;
   color: var(--bem-light);
+  background-color: var(--bem-bg);
 }
 .bem-hero{
   /*relativo para c ontrolar a posição absoluta dos filhos  */
@@ -172,7 +177,7 @@ header{
   justify-content: center;
   margin: 20px;
   font-size: 1.5rem;
-  color: var(--bem-secondary);
+  color: var(--bem-primary);
 }
 .bem-container{
   width:100%;
@@ -338,7 +343,7 @@ header{
 .bem-navbar{
   display:flex;
   align-items:center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding:var(--bem-spacing-md) var(--bem-spacing-lg);
   box-shadow:var(--bem-shadow-sm);
   transition:background .25s;
@@ -364,7 +369,7 @@ header{
 .bem-navbar__brand{ font-size:1.5rem;font-weight:700;text-decoration:none;color:inherit; position: relative; }
 .bem-navbar__menu{ display:flex;gap:var(--bem-spacing-lg);list-style:none;align-items:center }
 .bem-navbar__item{ display:inline-flex }
-.bem-navbar__link{ text-decoration:none;color:var(--bem-secondary);padding:var(--bem-spacing-sm);transition:color .2s }
+.bem-navbar__link{ text-decoration:none;color:var(--bem-secondary);padding:var(--bem-spacing-sm);transition:color .2s; font-size: 1.2rem; }
 .bem-navbar__link:hover{ color:var(--bem-text-muted) }
 .bem-navbar__link--active{ color:var(--bem-tertiary);font-weight:600 }
 .bem-navbar__toggle{ display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--bem-secondary) }
