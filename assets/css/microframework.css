@@ -517,18 +517,32 @@ header{
   z-index: 9;
   cursor: ew-resize;
   /*set the appearance of the slider:*/
-  width: 40px;
+  width: 80px;
   height: 40px;
-  background-color: #d37800;
-  opacity: 0.7;
-  border-radius: 100%;
-  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  background-image: url(../imagens/imagem_projeto/setas.svg),auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+  border-radius: 100px;
+  animation: esquerda-direita .2s 3;
+}
+/* keyframes */
+@keyframes esquerda-direita{
+  0% {
+    left:111px
+  }
+  50% {
+    left: 108px;
+  }
+  100%{
+    left: 111px;
+  }
 }
 .img-comp-overlay::after{
-  content: "A | D";
+  content: "Antes";
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 0;
+  left: 0%;
   width: 50px;
   height: 50px;
   color: var(--bem-tertiary);
