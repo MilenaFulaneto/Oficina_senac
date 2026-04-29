@@ -62,15 +62,15 @@ body{
   color:var(--bem-text);
   background:var(--bem-light);
   transition:background .25s, color .25s;
-  cursor: url(../imagens/cursor/cursor-svgrepo-com.svg), auto;
+  cursor: url(../imagens/cursor/cursor.svg), auto;
 }
 a{
-  cursor: url(../imagens/cursor/ancora.svg), auto;
+  cursor: url(../imagens/cursor/cursor-ancora.svg), auto;
   text-decoration: none;
   color: var(--bem-secondary);
 }
 p{
-  color: var(--bem-primary);
+  color: var(--bem-secondary);
   padding: 10px 100px;
 }
 
@@ -120,12 +120,12 @@ header{
 }
 .sobre-descricao{
   position: absolute;
-  top: 0;
+  top:0;
   right: 0;
   display: flex;
   flex-direction: column;
   width: 60%;
-  height: 30px;
+  height: 300px;
   color: var(--bem-light);
   background-color: var(--bem-bg);
 }
@@ -136,7 +136,7 @@ header{
   align-items: center;
   justify-content: center;
   height: 65.75vh;
-  background-image: url(../imagens/Garagem.webp);
+  background-image: url(../imagens/imagem_hero/fundo-hero.jpg);
   /*cover = estica e contain manter o tamanho original  */
   background-size: cover;
   background-repeat: no-repeat;
@@ -489,4 +489,36 @@ header{
     height: 100vh;
     font-size: 1.5rem;
   }
+}
+
+#projetos{
+  position: relative;
+}
+.img-comp-container {
+  position: relative;
+  height: 200px; /*should be the same height as the images*/
+}
+
+.img-comp-img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+
+.img-comp-img img {
+  display: block;
+  vertical-align: middle;
+}
+
+.img-comp-slider {
+  position: absolute;
+  z-index: 9;
+  cursor: ew-resize;
+  /*set the appearance of the slider:*/
+  width: 40px;
+  height: 40px;
+  background-color: #2196F3;
+  opacity: 0.7;
+  border-radius: 50%;
 }
