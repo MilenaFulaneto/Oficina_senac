@@ -62,10 +62,10 @@ body{
   color:var(--bem-text);
   background:var(--bem-light);
   transition:background .25s, color .25s;
-  cursor: url(../imagens/cursor/cursor.svg), auto;
+  cursor: url(../imagens/cursor/cursor-alt-svgrepo-com.svg), auto;
 }
 a{
-  cursor: url(../imagens/cursor/cursor-ancora.svg), auto;
+  cursor: url(../imagens/cursor/cursor-click-2-svgrepo-com\ \(1\).svg), auto;
   text-decoration: none;
   color: var(--bem-secondary);
 }
@@ -137,7 +137,7 @@ header{
   align-items: center;
   justify-content: center;
   height: 65.75vh;
-  background-image: url(../imagens/imagem_hero/fundo-hero.jpg);
+  background-image: url(../imagens/Garagem.webp);
   /*cover = estica e contain manter o tamanho original  */
   background-size: cover;
   background-repeat: no-repeat;
@@ -519,7 +519,22 @@ header{
   /*set the appearance of the slider:*/
   width: 40px;
   height: 40px;
-  background-color: #2196F3;
+  background-color: #d37800;
   opacity: 0.7;
-  border-radius: 50%;
+  border-radius: 100%;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+.img-comp-overlay::after{
+  content: "A | D";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  color: var(--bem-tertiary);
+  font-size: 1.4rem;
+}
+
+.img-comp-overlay{
+  border-right: solid 2px var(--bem-tertiary);
 }
