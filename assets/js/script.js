@@ -103,3 +103,38 @@ document.addEventListener("DOMContentLoaded", function() {
     animacaoAoRolar.observe(elemento);
   });
 });
+
+// ============================================
+// FAQ — Accordion Interativo
+// ============================================
+document.addEventListener('DOMContentLoaded', function () {
+  function initFaq() {
+    const perguntas = document.querySelectorAll('.faq-pergunta');
+
+    if (!perguntas.length) return; // sai se não houver FAQ na página
+
+    perguntas.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const estaAberto = btn.classList.contains('ativo');
+        const resposta   = btn.nextElementSibling; // .faq-resposta
+
+        // Fecha todos os itens abertos antes de abrir o novo
+        perguntas.forEach(function (outroBt) {
+          outroBt.classList.remove('ativo');
+          outroBt.setAttribute('aria-expanded', 'false');
+          const outraResposta = outroBt.nextElementSibling;
+          if (outraResposta) outraResposta.classList.remove('aberta');
+        });
+
+        // Se o clicado não estava aberto, abre ele
+        if (!estaAberto) {
+          btn.classList.add('ativo');
+          btn.setAttribute('aria-expanded', 'true');
+          if (resposta) resposta.classList.add('aberta');
+        }
+      });
+    });
+  }
+
+  initFaq();
+});
