@@ -18,7 +18,7 @@
 </head>
 <body class="bem-cursor">
     <div id="navbar-principal"></div>
-
+    
     <main>
         <div id="navbar-secundaria"></div>
 
@@ -300,7 +300,20 @@
                 if (!validarFormulario()) return;
 
                 // Simulação de envio (substituir pela chamada real ao backend)
-                 emailjs.sendForm('service_xxxxx', 'template_xxxxxx', this)
+                fetch('enviar_email.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        nome: document.getElementById("nome").value,
+                        telefone: document.getElementById("telefone").value,
+                        email: document.getElementById("email").value,
+                        servico: document.getElementById("servico").value,
+                        mensagem: document.getElementById("mensagem").value,
+                    })
+                })
+        
                     .then(() => {
                          const btnEnviar = document.getElementById('btn-enviar');
                 btnEnviar.disabled  = true;
@@ -314,6 +327,21 @@
                         console.log('FAILED...', error);
                     });
             });
+
+            //    emailjs.sendForm('service_xxxxx', 'template_xxxxxx', this)
+            //         .then(() => {
+            //              const btnEnviar = document.getElementById('btn-enviar');
+            //     btnEnviar.disabled  = true;
+            //     btnEnviar.textContent = 'Enviando...';
+
+            //     setTimeout(function () {
+            //         form.style.display    = 'none';
+            //         sucesso.classList.add('visivel');
+            //     }, 1000);
+            //         }, (error) => {
+            //             console.log('FAILED...', error);
+            //         });
+            // });
 
             // ---- Resetar para nova mensagem ----
             btnNova.addEventListener('click', function () {
